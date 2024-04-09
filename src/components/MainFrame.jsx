@@ -6,6 +6,10 @@ import { FaGraduationCap } from "react-icons/fa";
 import faizanPP from "../assets/faizan-profile-pic.png";
 import { useRecoilValue } from "recoil";
 import {
+  box1Atom,
+  box2Atom,
+  box3Atom,
+  box4Atom,
   educationAtom,
   langAtom,
   locationAtom,
@@ -25,6 +29,11 @@ const MainFrame = () => {
   const pic = useRecoilValue(picAtom);
   const education = useRecoilValue(educationAtom);
   const primaryColor = useRecoilValue(primaryColorAtom);
+
+  const box1 = useRecoilValue(box1Atom);
+  const box2 = useRecoilValue(box2Atom);
+  const box3 = useRecoilValue(box3Atom);
+  const box4 = useRecoilValue(box4Atom);
 
   return (
     <div className="flex flex-col items-center max-w-[400px] p-4 gap-4 font-Manrope bg-[#050505] rounded-2xl z-10">
@@ -58,10 +67,10 @@ const MainFrame = () => {
         <div></div>
       </section>
       <section className="grid grid-cols-2 gap-2">
-        <SmallBox title={"12"} desc={"Projects"} className="faizan" />
-        <SmallBox title={"2"} desc={"Years"} />
-        <SmallBox title={"3"} desc={"Startups"} />
-        <SmallBox title={"35"} desc={"Failed"} className="faizan" />
+        <SmallBox title={box1.value} desc={box1.title} />
+        <SmallBox title={box2.value} desc={box2.title} />
+        <SmallBox title={box3.value} desc={box3.title} />
+        <SmallBox title={box4.value} desc={box4.title} />
       </section>
     </div>
   );

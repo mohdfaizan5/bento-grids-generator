@@ -6,7 +6,7 @@ export const nameAtom = atom({
 });
 export const professionAtom = atom({
   key: "professionAtom",
-  default: "Entrepreneur2",
+  default: "Entrepreneur",
 });
 
 //
@@ -49,7 +49,7 @@ export const box3Atom = atom({
   key: "box3Atom",
   default: {
     title: "Years",
-    value: 2,
+    value: 5,
   },
 });
 export const box4Atom = atom({
@@ -69,7 +69,5 @@ export const box1Atom = atom({
 
 export const picAtom = atom({
   key: "picAtom",
-  default: ""
+  default: "",
 });
-
-
