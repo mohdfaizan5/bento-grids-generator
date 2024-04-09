@@ -1,5 +1,4 @@
 import React from "react";
-// import * as htmlToImage from "html-to-image";
 import { toPng, toJpeg, toBlob, toPixelData, toSvg } from "html-to-image";
 import MainFrame from "./components/MainFrame";
 import SideEditor from "./components/SideEditor";
@@ -53,7 +52,7 @@ const App = () => {
           <button
             className="px-3 py-2 mt-10 text-[#cccccc] font-semibold text-muted bg-[#101010] border rounded-full"
           >
-          Made with 💖 <a href="https://twitter.com/mohdfaizan_5" target="_blank" className="underline">MohdFaizan5</a>
+          Made with 💖 by <a href="https://twitter.com/mohdfaizan_5" target="_blank" className="underline">MohdFaizan5</a>
           </button>
         </div>
       </div>

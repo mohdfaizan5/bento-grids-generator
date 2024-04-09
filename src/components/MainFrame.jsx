@@ -53,7 +53,7 @@ const MainFrame = () => {
             </div>
             <h4 className="text-[#e6e6e6] font-semibold text-2xl">{name}</h4>
             <h6 className="font-light text-sm text-[#999999]">
-              I'm a{" "}
+              I'm an{" "}
               <span className={`text-prim font-medium`}>{profession}</span>
             </h6>
           </div>
