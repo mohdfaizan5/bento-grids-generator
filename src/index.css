@@ -21,7 +21,7 @@
 
 @layer base {
   :root {
-    --primary-color: #A191FC;
+    --primary-color: 161, 145, 252;
     --text-color: #e6e6e6;
     --bg-color: #050505;
 

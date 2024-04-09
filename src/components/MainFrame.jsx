@@ -28,6 +28,8 @@ const MainFrame = () => {
 
   return (
     <div className="flex flex-col items-center max-w-[400px] p-4 gap-4 font-Manrope bg-[#050505] rounded-2xl z-10">
+      {/* <span className="block bg-prim size-5">.sadfasd</span> */}
+
       <section className="flex flex-col gap-3 p-4  rounded-xl bg-[#101010]">
         <div className="flex gap-2">
           <img
@@ -43,9 +45,7 @@ const MainFrame = () => {
             <h4 className="text-[#e6e6e6] font-semibold text-2xl">{name}</h4>
             <h6 className="font-light text-sm text-[#999999]">
               I'm a{" "}
-              <span className={`text-[${primaryColor}] font-medium`}>
-                {profession}
-              </span>
+              <span className={`text-prim font-medium`}>{profession}</span>
             </h6>
           </div>
         </div>
@@ -85,10 +85,10 @@ const SmallBox = ({ className, title, desc }) => {
       }`}
     >
       <div className="flex items-center">
-        <h3 className="inline-block text-5xl font-bold text-transparent bg-gradient-to-b from-[#A191FC]  bg-clip-text ">
+        <h3 className="inline-block text-5xl font-bold text-transparent bg-gradient-to-b from-prim to-[#050505] bg-clip-text">
           {title}
         </h3>
-        <span className="text-[#A191FC] font-semibold text-xl">+</span>
+        <span className="text-xl font-semibold text-prim">+</span>
       </div>
       <div className={"text-[#cccccc] font-semibold"}>{desc}</div>
       <div></div>

@@ -18,7 +18,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        prim: "hex(var(--primary-color))",
+        prim: "rgb(var(--primary-color))",
         second: "rgb(var(--secondary-color))",
         bg: "rgb(var(--bg-color))",
         border: "hsl(var(--border))",

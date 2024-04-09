@@ -19,13 +19,13 @@ import { Label } from "@radix-ui/react-label";
 
 const themes = [
   {
-    name: "orangeBlack", 
+    name: "orangeBlack",
     primary: "#EA5919",
     secondary: "#EA5919",
     neutral: "#FFFFFF",
-    bg: "#E8E8E8"
+    bg: "#E8E8E8",
   },
-]
+];
 
 const SideEditor = () => {
   const [name, setName] = useRecoilState(nameAtom);
@@ -38,10 +38,10 @@ const SideEditor = () => {
   // const [box2, setBox2] = useRecoilState(box2Atom);
   // const [box3, setBox3] = useRecoilState(box3Atom);
   // const [box4, setBox4] = useRecoilState(box4Atom);
-  const setPic= useSetRecoilState(picAtom)
-  
+  const setPic = useSetRecoilState(picAtom);
+
   const [primaryColor, setPrimaryColor] = useRecoilState(primaryColorAtom);
-  const root = document.querySelector(":root")
+  const root = document.querySelector(":root");
   return (
     <div className="flex flex-col items-center px-5 text-black bg-white border-r-2 lg:w-96">
       <h1 className="py-10 text-4xl font-semibold">Bento Grids</h1>
@@ -87,33 +87,53 @@ const SideEditor = () => {
         </div>
         <div className="grid w-64 items-center gap-1.5">
           {/* <Label htmlFor="picture">Picture</Label> */}
-          <Input onChange={(e)=>{
-            setPic(URL.createObjectURL(e.target.files[0]))
-          }} accept={"image/jpg, image/jpeg, image/png"} id="picture" type="file"/>
+          <Input
+            onChange={(e) => {
+              setPic(URL.createObjectURL(e.target.files[0]));
+            }}
+            accept={"image/jpg, image/jpeg, image/png"}
+            id="picture"
+            type="file"
+          />
         </div>
 
-
-
-
-
-
-        
         {/* <div className="flex">
           <input type="color" className="border-none rounded-full colorInput size-12"/>
           <input type="color" className="border-none rounded-full colorInput size-12"/>
           <input type="color" className="border-none rounded-full colorInput size-12"/>
           <input type="color" className="border-none rounded-full colorInput size-12"/>
         </div> */}
-        
-        <div>
-          <h2 className="mt-3 font-semibold text-prim text-md">Themes</h2>
-          <div onClick={()=>{
-            root.style.setProperty("--primary-color", "#F8445E")
-          }}>
+
+        <h2 className="mt-3 font-semibold text-prim text-md">Themes</h2>
+        <div className="flex gap-2">
+          <div
+            onClick={() => {
+              root.style.setProperty("--primary-color", "234, 89, 25");
+            }}
+          >
             <span className="block h-7 w-3 bg-[#eb4034] rounded-md"></span>
             {/* <span className="block h-7 w-3 bg-[#F8445E]"></span> */}
           </div>
+          <div
+            onClick={() => {
+              root.style.setProperty("--primary-color", "20, 129, 251");
+            }}
+          >
+            <span className="block h-7 w-3 bg-[#1481FB] rounded-md"></span>
+            {/* <span className="block h-7 w-3 bg-[#F8445E]"></span> */}
+          </div>
+          <div
+            onClick={() => {
+              root.style.setProperty("--primary-color", "161, 145, 252");
+            }}
+          >
+            <span className="block h-7 w-3 bg-[#a191fc] rounded-md"></span>
+            {/* <span className="block h-7 w-3 bg-[#F8445E]"></span> */}
+          </div>
+
         </div>
+
+        {/* Below */}
       </form>
     </div>
   );
