@@ -28,6 +28,16 @@ const themes = [
 ];
 
 const SideEditor = () => {
+  const [primaryColor, setPrimaryColor] = useRecoilState(primaryColorAtom);
+  const root = document.querySelector(":root");
+  return (
+    <div className="hidden md:flex md:flex-col">
+      <EditorCore />
+    </div>
+  );
+};
+
+export const EditorCore = () => {
   const [name, setName] = useRecoilState(nameAtom);
   const [profession, setProfession] = useRecoilState(professionAtom);
   const [location, setLocation] = useRecoilState(locationAtom);
@@ -40,10 +50,8 @@ const SideEditor = () => {
   const [box4, setBox4] = useRecoilState(box4Atom);
   const setPic = useSetRecoilState(picAtom);
 
-  const [primaryColor, setPrimaryColor] = useRecoilState(primaryColorAtom);
-  const root = document.querySelector(":root");
   return (
-    <div className="items-center hidden px-5 text-black bg-white border-r-2 md:flex md:flex-col lg:w-96 ">
+    <div className="items-center px-5 text-black bg-white border-r-2 lg:w-96 ">
       <h1 className="py-10 text-4xl font-semibold">Bento Grids</h1>
       <form className="flex flex-col items-center gap-1">
         <Input
@@ -98,11 +106,11 @@ const SideEditor = () => {
         </div>
 
         {/* <div className="flex">
-          <input type="color" className="border-none rounded-full colorInput size-12"/>
-          <input type="color" className="border-none rounded-full colorInput size-12"/>
-          <input type="color" className="border-none rounded-full colorInput size-12"/>
-          <input type="color" className="border-none rounded-full colorInput size-12"/>
-        </div> */}
+    <input type="color" className="border-none rounded-full colorInput size-12"/>
+    <input type="color" className="border-none rounded-full colorInput size-12"/>
+    <input type="color" className="border-none rounded-full colorInput size-12"/>
+    <input type="color" className="border-none rounded-full colorInput size-12"/>
+  </div> */}
 
         <h2 className="mt-3 font-semibold text-prim text-md">Themes</h2>
         <div className="flex gap-2">

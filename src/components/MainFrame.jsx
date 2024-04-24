@@ -36,10 +36,10 @@ const MainFrame = () => {
   const box4 = useRecoilValue(box4Atom);
 
   return (
-    <div className="flex flex-col items-center max-w-[400px] p-4 gap-4 font-Manrope bg-[#050505] rounded-2xl z-10">
+    <div className="flex flex-col items-center w-[400px] md:w-[400px] p-4 gap-4 font-Manrope bg-[#050505] mx-auto rounded-2xl z-10">
       {/* <span className="block bg-prim size-5">.sadfasd</span> */}
 
-      <section className="flex flex-col gap-3 p-4  rounded-xl bg-[#101010]">
+      <section className="flex w-full overflow-x-hidden flex-col gap-3 p-4  rounded-xl bg-[#101010]">
         <div className="flex gap-2">
           <img
             src={pic ? pic : faizanPP}
